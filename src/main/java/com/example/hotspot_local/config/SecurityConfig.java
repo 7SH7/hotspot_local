@@ -27,6 +27,8 @@ public class SecurityConfig {
 
     http.httpBasic((basic) -> basic.disable());
 
+	http.headers().frameOptions().sameOrigin();
+
     //		oauth2Login() 메서드를 사용하여 OAuth 2.0 로그인을 활성화하고, (구현해야하는 filter같은 것을 기본적으로 지원해주는 것!)
     //		loginPage() 메서드를 사용하여 사용자가 로그인하려고 할 때 리디렉션할 URL을 지정합니다.
 
@@ -44,12 +46,12 @@ public class SecurityConfig {
                     (request, response, authentication) -> {
                       response.sendRedirect("http://localhost:3000");
                     }));
-    
+
 //  session 관련된 것들은 다 여기서 처리해야함.
-    
+
     http.authorizeHttpRequests(
         (auth) ->
-            auth.requestMatchers("/get/**", "/login", "/stores/**")
+            auth.requestMatchers("/get/**", "/login", "/stores/**", "/h2-console/**")
                 .permitAll()
                 // 유저 세션이 있으면 열어주고 없으면 막아주고 -> filter 하나를 만들어서 처리하면 좋아.
                 // secuitycontextholder에 세션이 있으면 값을 넣어주는 방식을..
