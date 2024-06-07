@@ -35,12 +35,7 @@ values('https://elasticbeanstalk-ap-northeast-2-975049928260.s3.ap-northeast-2.a
 당신은 매운 음식을 사랑하고, 그 매운맛을 마술처럼 즐기는 젊고 유쾌한 맵술사 입니다! 맵술사와 매운 음식을 함께 먹는다면 당신은 그 어떠한 캡사이신도 극복할 수 있습니다!'
     ,'맵술사',4, 'https://elasticbeanstalk-ap-northeast-2-975049928260.s3.ap-northeast-2.amazonaws.com/viaF/808ab40e-d79b-40dc-bb2b-c4943a3a996fKakaoTalk_20240521_211859997.png', 'E39E90', 'F2D3CC');
 
-insert into user_character(character_back_image, character_front_big_image, character_front_small_image, character_info, character_name, spicy_level, character_my_page_image, original_color, changed_color)
-values('https://elasticbeanstalk-ap-northeast-2-975049928260.s3.ap-northeast-2.amazonaws.com/viaF/b0b3d831-353e-4fb8-affb-257526c32836%EC%BA%90%EB%A6%AD%ED%84%B0%20%EB%92%B7%EB%A9%B4-4.png',
-'https://elasticbeanstalk-ap-northeast-2-975049928260.s3.ap-northeast-2.amazonaws.com/viaF/d82019ff-1c40-4f4a-913b-bdec4a6dedab%ED%81%B0%EB%B2%84%EC%A0%84-4.png',
-'https://elasticbeanstalk-ap-northeast-2-975049928260.s3.ap-northeast-2.amazonaws.com/viaF/3084d604-6f80-4e0c-81f4-45ec22beb264%EC%9E%91%EC%9D%80%EB%B2%84%EC%A0%84-4.png',
-       '*"뾰로롱~ο(=•ω＜=)ρ⌒☆ (캡사이신을 뿌리며)"*
+insert into user_character(character_back_image, character_front_big_image, character_front_small_image, character_info, character_name, spicy_level, character_my_page_image, original_color, changed_color) values('https://elasticbeanstalk-ap-northeast-2-975049928260.s3.ap-northeast-2.amazonaws.com/viaF/b0b3d831-353e-4fb8-affb-257526c32836%EC%BA%90%EB%A6%AD%ED%84%B0%20%EB%92%B7%EB%A9%B4-4.png', 'https://elasticbeanstalk-ap-northeast-2-975049928260.s3.ap-northeast-2.amazonaws.com/viaF/d82019ff-1c40-4f4a-913b-bdec4a6dedab%ED%81%B0%EB%B2%84%EC%A0%84-4.png', 'https://elasticbeanstalk-ap-northeast-2-975049928260.s3.ap-northeast-2.amazonaws.com/viaF/3084d604-6f80-4e0c-81f4-45ec22beb264%EC%9E%91%EC%9D%80%EB%B2%84%EC%A0%84-4.png',        '*"뾰로롱~ο(=•ω＜=)ρ⌒☆ (캡사이신을 뿌리며)"*
 
-매운맛을 통달한 당신은 매운 음식 앞에서 두려움 따위 없습니다. 캡사이신을 물처럼 다루는 당신! 어떠한 매운 맛의 공격에도 끄떡 없는 당신! 어떠한 매운 음식이든 그대에겐 식은 죽 먹기입니다.'
-    ,'실비요정',5, 'https://elasticbeanstalk-ap-northeast-2-975049928260.s3.ap-northeast-2.amazonaws.com/viaF/877f0bd8-73e4-45a0-8817-f22413757dc3KakaoTalk_20240521_211859997_04.png', 'D1978F', 'EAD0CC');
+매운맛을 통달한 당신은 매운 음식 앞에서 두려움 따위 없습니다. 캡사이신을 물처럼 다루는 당신! 어떠한 매운 맛의 공격에도 끄떡 없는 당신! 어떠한 매운 음식이든 그대에겐 식은 죽 먹기입니다.' ,'실비요정',5, 'https://elasticbeanstalk-ap-northeast-2-975049928260.s3.ap-northeast-2.amazonaws.com/viaF/877f0bd8-73e4-45a0-8817-f22413757dc3KakaoTalk_20240521_211859997_04.png', 'D1978F', 'EAD0CC');
 
