@@ -13,8 +13,8 @@ delete from silbi_portfolio_likelion.user where email = '22000116@handong.ac.kr'
 
 # 처음이 review_id, 두번째가 comment, 세번째가 foodName, 네번째가 review_image,
 # 다섯번째가 review_spicyLevel, 여섯번째가 store_id, 일곱번짝 title, 마지막이 user_id
-insert into silbi_portfolio_likelion.review(comment, food_name, review_image, review_spicy_level, store_id, title, user_email)
-values('추천', null, null, 5, '26546824', '하하', '22000116@handong.ac.kr');
+insert into review(comment, food_name, review_image, review_spicy_level, store_id, title, user_email)
+values('추천', null, null, 5, '26546824', '하하', 'yezi0512@handong.ac.kr');
 
 insert into silbi_portfolio_likelion.review(comment, food_name, review_image, review_spicy_level, store_id, title, user_email)
 values( '추천', null, null, 4, '26546824', '하하', '22000116@handong.ac.kr');
