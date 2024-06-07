@@ -32,6 +32,8 @@ public class Review {
 	private String foodName;
 
 	private String reviewerNickName;
+	private String reviewerName;
+
 
 	@Column(nullable = false)
 	private String storeId;
@@ -49,6 +51,8 @@ public class Review {
 				.reviewUserImage(reviewDto.getReviewUserImage())
 				.foodName(reviewDto.getFoodName())
 				.storeId(reviewDto.getStoreId())
+				.reviewerName(reviewDto.getReviewerName())
+				.reviewerNickName(reviewDto.getReviewerNickName())
 				.user(user)
 				.build();
 	}

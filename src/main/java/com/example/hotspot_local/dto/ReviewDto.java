@@ -26,6 +26,7 @@ public class ReviewDto {
 	private String userEmail;
 
 	private String reviewerNickName;
+	private String reviewerName;
 
 //	private UserRepository userRepository;
 //	private UserCharacterRepository userCharacterRepository;
@@ -36,6 +37,7 @@ public class ReviewDto {
 		this.reviewSpicyLevel = userReviewRequest.getReviewSpicyLevel();
 		this.reviewerNickName = userRepository.findByEmail(userReviewRequest.getUserEmail()).getNickName();
 //		this.reviewUserImage = userReviewRequest.getReviewImage();
+		this.reviewerName = userRepository.findByEmail(userReviewRequest.getUserEmail()).getUserName();
 		this.reviewUserImage = userCharacterRepository.findByCharacterName(userRepository.findByEmail(userReviewRequest.getUserEmail()).getNickName()).getReviewUserImage();
 		this.foodName = userReviewRequest.getFoodName();
 		this.storeId = userReviewRequest.getStoreId();
@@ -48,6 +50,8 @@ public class ReviewDto {
 				.comment(review.getComment())
 				.reviewSpicyLevel(review.getReviewSpicyLevel())
 				.reviewUserImage(review.getReviewUserImage())
+				.reviewerNickName(review.getReviewerNickName())
+				.reviewerName(review.getReviewerName())
 				.foodName(review.getFoodName())
 				.storeId(review.getStoreId())
 				.reviewerNickName(review.getReviewerNickName())
