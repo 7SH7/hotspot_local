@@ -3,11 +3,10 @@ package com.example.hotspot_local.dto;
 import com.example.hotspot_local.controller.request.AboutMap.UserReviewRequest;
 import com.example.hotspot_local.domain.Review;
 import com.example.hotspot_local.domain.User;
+import com.example.hotspot_local.repository.UserCharacterRepository;
+import com.example.hotspot_local.repository.UserRepository;
 import jakarta.persistence.Column;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,16 +20,20 @@ public class ReviewDto {
 	private String title;
 	private String comment;
 	private int reviewSpicyLevel;
-	private String reviewImage;
+	private String reviewUserImage;
 	private String foodName;
 	private String storeId;
 	private String userEmail;
 
-	public ReviewDto(UserReviewRequest userReviewRequest) {
+//	private UserRepository userRepository;
+//	private UserCharacterRepository userCharacterRepository;
+
+	public ReviewDto(UserReviewRequest userReviewRequest, UserRepository userRepository, UserCharacterRepository userCharacterRepository) {
 		this.title = userReviewRequest.getTitle();
 		this.comment = userReviewRequest.getComment();
 		this.reviewSpicyLevel = userReviewRequest.getReviewSpicyLevel();
-		this.reviewImage = userReviewRequest.getReviewImage();
+//		this.reviewUserImage = userReviewRequest.getReviewImage();
+		this.reviewUserImage = userCharacterRepository.findByCharacterName(userRepository.findByEmail(userReviewRequest.getUserEmail()).getNickName()).getReviewUserImage();
 		this.foodName = userReviewRequest.getFoodName();
 		this.storeId = userReviewRequest.getStoreId();
 		this.userEmail = userReviewRequest.getUserEmail();
@@ -41,7 +44,7 @@ public class ReviewDto {
 				.title(review.getTitle())
 				.comment(review.getComment())
 				.reviewSpicyLevel(review.getReviewSpicyLevel())
-				.reviewImage(review.getReviewImage())
+				.reviewUserImage(review.getReviewUserImage())
 				.foodName(review.getFoodName())
 				.storeId(review.getStoreId())
 				.userEmail(review.getUser().getEmail())

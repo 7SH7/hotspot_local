@@ -27,7 +27,7 @@ public class Review {
 	@Column(nullable = false)
 	private int reviewSpicyLevel;
 
-	private String reviewImage;
+	private String reviewUserImage;
 
 	private String foodName;
 
@@ -44,7 +44,7 @@ public class Review {
 				.title(reviewDto.getTitle())
 				.comment(reviewDto.getComment())
 				.reviewSpicyLevel(reviewDto.getReviewSpicyLevel())
-				.reviewImage(reviewDto.getReviewImage())
+				.reviewUserImage(reviewDto.getReviewUserImage())
 				.foodName(reviewDto.getFoodName())
 				.storeId(reviewDto.getStoreId())
 				.user(user)

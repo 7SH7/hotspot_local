@@ -10,7 +10,7 @@ public class UserReviewRequest {
 	int reviewSpicyLevel;     // spicy level
 	String title;   	// title
 	String comment;         // comment
-	String reviewImage;
+//	String reviewImage;         // 차후에 reviewUserImage로 치환됨.
 	String foodName;
 
 

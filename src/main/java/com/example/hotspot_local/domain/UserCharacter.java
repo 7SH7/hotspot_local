@@ -26,6 +26,8 @@ public class UserCharacter {
 	private String characterInfo;
 	private int spicyLevel;
 
+	private String reviewUserImage;
+
 	private String originalColor;
 	private String changedColor;
 

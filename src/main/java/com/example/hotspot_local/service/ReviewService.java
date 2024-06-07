@@ -8,6 +8,7 @@ import com.example.hotspot_local.domain.User;
 import com.example.hotspot_local.dto.ReviewDto;
 import com.example.hotspot_local.exception.UserException;
 import com.example.hotspot_local.repository.ReviewRepository;
+import com.example.hotspot_local.repository.UserCharacterRepository;
 import com.example.hotspot_local.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -23,13 +24,14 @@ public class ReviewService {
 
 	private final ReviewRepository reviewRepository;
 	private final UserRepository userRepository;
+	private final UserCharacterRepository userCharacterRepository;
 
 
 	public void save(UserReviewRequest userReviewRequest) throws NullPointerException {
 
 		UserException.UserLoginCheck(userReviewRequest.getUserEmail());
 
-		ReviewDto reviewDto = new ReviewDto(userReviewRequest);
+		ReviewDto reviewDto = new ReviewDto(userReviewRequest, userRepository, userCharacterRepository);
 		User targetUser = userRepository.findByEmail(userReviewRequest.getUserEmail());
 
 		reviewRepository.save(Review.from(reviewDto, targetUser));

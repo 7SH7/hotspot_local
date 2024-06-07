@@ -19,6 +19,8 @@ public class UserCharacterDto {
 	private String characterInfo;
 	private int spicyLevel;
 
+	private String reviewUserImage;
+
 	private String originalColor;
 	private String changedColor;
 
@@ -31,6 +33,7 @@ public class UserCharacterDto {
 				.characterMyPageImage(userCharacter.getCharacterMyPageImage())
 				.characterName(userCharacter.getCharacterName())
 				.characterInfo(userCharacter.getCharacterInfo())
+				.reviewUserImage(userCharacter.getReviewUserImage())
 				.spicyLevel(userCharacter.getSpicyLevel())
 				.originalColor(userCharacter.getOriginalColor())
 				.changedColor(userCharacter.getChangedColor())
