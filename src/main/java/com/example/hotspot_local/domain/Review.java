@@ -31,6 +31,8 @@ public class Review {
 
 	private String foodName;
 
+	private String reviewerNickName;
+
 	@Column(nullable = false)
 	private String storeId;
 
